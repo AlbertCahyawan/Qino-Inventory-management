@@ -11,15 +11,21 @@
 
     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>  
     
-    <bean class="controller.LoginController" id="loginKey"/> 
-    <bean class="controller.BlankController" id="blankKey"/>  
-    <bean class="controller.ChartController" id="chartKey"/>  
-    <bean class="controller.FormController" id="formKey"/> 
-    <bean class="controller.TableController" id="tableKey"/>  
-    <bean class="controller.UiController" id="uiKey"/>  
-    <bean class="controller.TabPanelController" id="tablepanelKey"/>    
-    <bean class="controller.RegisterationController" id="registerationKey"/>   
     
+    <bean class="controller.IndexController" id="indexController"/>  
+    <bean class="controller.LoginController" id="loginKey"/>  
+    <bean class="controller.RegisterationController" id="registerationKey"/>
+    <bean class="controller.EmployeeController" id="EmployeeKey"/>
+    <bean class="controller.InventoryController" id="InventoryKey"/>
+    <bean class="controller.AddUserController" id="addUserKey"/>
+    <bean class="controller.AddItemController" id="additemKey"/> 
+    <bean class="controller.LogoutController" id="LogoutKey"/>
+    <bean class="controller.DeleteUserController" id="DeleteUserKey"/>
+    <bean class="controller.EditUserController" id="EditUserKey"/> 
+    <bean class="controller.EditItemController" id="EditItemKey"/>
+    <bean class="controller.DeleteItemController" id="DeleteItemKey"/> 
+    <bean class="controller.RestaurantController" id="RestaurantKey"/> 
+ 
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
     for the index controller we are using ParameterizableViewController, so we must
@@ -27,17 +33,20 @@
     -->
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
-            <props>
-                
+            <props> 
                 <prop key="index.htm">indexController</prop>
-                <prop key="loginform.htm">loginKey</prop> 
-                <prop key="blank.htm">blankKey</prop>  
-                <prop key="chart.htm">chartKey</prop>
-                <prop key="form.htm">formKey</prop> 
-                <prop key="table.htm">tableKey</prop>
-                <prop key="ui.htm">uiKey</prop>  
-                <prop key="tablepanel.htm">tablepanelKey</prop> 
-                <prop key="registeration.htm">registerationKey</prop>  
+                <prop key="loginform.htm">loginKey</prop>  
+                <prop key="registeration.htm">registerationKey</prop>
+                <prop key="employeeController.htm">EmployeeKey</prop>  
+                <prop key="inventoryController.htm">InventoryKey</prop>
+                <prop key="adduserController.htm">addUserKey</prop>  
+                <prop key="additemController.htm">additemKey</prop>
+                <prop key="logout.htm">LogoutKey</prop>  
+                <prop key="deleteuser.htm">DeleteUserKey</prop>  
+                <prop key="edituser.htm">EditUserKey</prop>  
+                <prop key="deleteitem.htm">EditItemKey</prop>  
+                <prop key="edititem.htm">DeleteItemKey</prop>
+                <prop key="restaurant.htm">RestaurantKey</prop>   
             </props>
         </property>
     </bean>
@@ -50,8 +59,5 @@
     <!--
     The index controller.
     -->
-    <bean name="indexController"
-          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
-          p:viewName="index" />
 
 </beans>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 3, 2017 10:54:17 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Item" table="item" catalog="qino" optimistic-lock="version">
+        <id name="uid" type="java.lang.Integer">
+            <column name="Uid" />
+            <generator class="identity" />
+        </id>
+        <property name="itemName" type="string">
+            <column name="ItemName" length="30" not-null="true" />
+        </property>
+        <property name="itemCategory" type="string">
+            <column name="ItemCategory" length="30" not-null="true" />
+        </property>
+        <property name="itemPrice" type="int">
+            <column name="ItemPrice" not-null="true" />
+        </property>
+        <property name="itemCost" type="int">
+            <column name="ItemCost" not-null="true" />
+        </property>
+        <property name="restaurantUid" type="int">
+            <column name="RestaurantUid" not-null="true" />
+        </property>
+        <property name="minimumQuantity" type="int">
+            <column name="MinimumQuantity" not-null="true" />
+        </property>
+        <property name="quantity" type="int">
+            <column name="Quantity" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

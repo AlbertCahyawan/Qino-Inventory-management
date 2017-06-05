@@ -205,6 +205,11 @@ max-height:170px;
 max-width:170px;
 }
 
+.user-icon { 
+max-height:15px;
+max-width:15px; 
+}
+
 .navbar-cls-top .navbar-brand {
 	color: #fff;
 background: #C90000;

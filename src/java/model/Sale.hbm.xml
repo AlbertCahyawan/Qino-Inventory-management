@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 3, 2017 10:54:17 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Sale" table="sale" catalog="qino" optimistic-lock="version">
+        <id name="uid" type="java.lang.Integer">
+            <column name="Uid" />
+            <generator class="identity" />
+        </id>
+        <property name="date" type="timestamp">
+            <column name="Date" length="19" not-null="true" />
+        </property>
+        <property name="restaurantUid" type="int">
+            <column name="RestaurantUid" not-null="true" />
+        </property>
+        <property name="itemUid" type="int">
+            <column name="ItemUid" not-null="true" />
+        </property>
+        <property name="quantity" type="int">
+            <column name="Quantity" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
